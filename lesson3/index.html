@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>My first Vue app</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+  <div id="vue-app">
+      <h1>{{ greet('night') }}</h1>
+      <p>name: {{ name }}</p>
+      <p>job: {{ job }}</p>
+      <p>
+          <a href="website">baidu link1: invalid</a>
+      </p>
+
+      <p>
+          <a href="website">baidu link2: invalid</a>
+      </p>
+
+      <p>
+          <a v-bind:href="website">baidu link3: invalid</a>
+      </p>
+
+      <!-- input bind -->
+      <p>
+          <h6>错误的input绑定</h6>
+          <input type="text" value="name" />
+      </p>
+
+      <p>
+          <h6>正确的input绑定</h6>
+          <input type="text" v-bind:value="name" />
+      </p>
+
+        <p v-html="websiteTag"></p>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
