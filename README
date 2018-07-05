@@ -10,6 +10,19 @@
 
 # lesson4
 - event: 点击、双击、鼠标移动
+- v-on监听DOM事件
+
+# lesson5 事件修饰符
+- 事件修饰符 https://cn.vuejs.org/v2/guide/events.html#%E4%BA%8B%E4%BB%B6%E4%BF%AE%E9%A5%B0%E7%AC%A6
+- v-on的事件的修饰
+
+# lesson6 键盘事件
+- 键盘事件
+
+# lesson7 双向绑定数据
+- v-modal双向绑定数据
+
+
 
 
 

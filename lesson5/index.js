@@ -19,6 +19,9 @@ var app = new Vue({
             this.x = event.offsetX
             this.y = event.offsetY
             event.offsetX
+        },
+        click: function() {
+            alert("clicked me!")
         }
     }
 })
