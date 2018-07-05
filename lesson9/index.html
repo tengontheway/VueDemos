@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My first Vue app</title>
+    <script src="https://unpkg.com/vue"></script>
+    <link href="style.css" rel="stylesheet"/>
+</head>
+
+<body>
+<div id="vue-app">
+    <h1>Dynamic CSS</h1>
+
+    <!-- 示例1: dynamic color -->
+    <h1>Example 1</h1>
+    <div @click="isShow=!isShow" v-bind:class="{available: isShow}">
+        <span>Test</span>
+    </div>
+
+    <!-- 示例1: computed class function -->
+    <h1>Example 2</h1>
+    <button @click="isShow = !isShow">Toggle show</button>
+    <button @click="isNearby = !isNearby">Toggle nearby</button>
+    <div v-bind:class="computedClass">
+        <span>Test</span>
+    </div>
+
+
+</div>
+
+<script src="index.js"></script>
+</body>
+
+</html>

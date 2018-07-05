@@ -22,6 +22,14 @@
 # lesson7 双向绑定数据
 - v-modal双向绑定数据
 
+# lesson8 Computed和普通函数的区别
+- Computed函数的调用只依赖于相关的变量，而普通函数在变量更改时会全部调用
+- 对于任何复杂逻辑，你都应当使用计算属性
+
+参考链接: https://cn.vuejs.org/v2/guide/computed.html
+
+# lesson9 动态CSS样式
+
 
 
 
