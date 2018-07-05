@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My first Vue app</title>
+    <script src="https://unpkg.com/vue"></script>
+    <link href="style.css" rel="stylesheet"/>
+</head>
+
+<body>
+<div id="vue-app">
+    <h1>1. Conditionals</h1>
+
+    <button @click="isSucceed = !isSucceed">Toggle succeed</button>
+    <button @click="isFailed = !isFailed">Toggle failed</button>
+
+    <!-- v-if 条件为false，整个标签不可见 -->
+    <h2>Test v-if</h2>
+    <p v-if="isSucceed">v-if isSucceed!</p>
+    <p v-if="isFailed">v-if isFailed!</p>
+
+    <h2>Test v-if-else-if</h2>
+    <p v-if="isSucceed">v-if-else-if isSucceed!</p>
+    <p v-else-if="isFailed">v-if-else-if isFailed!</p>
+
+    <!-- v-show 只是在标签上添加了display: none属性 -->
+    <h2>Test v-show</h2>
+    <p v-show="isSucceed">v-show isSucceed!</p>
+    <p v-show="isFailed">v-show isFailed!</p>
+
+
+    <h1>2. v-for</h1>
+
+    <ul>
+        <li v-for="name in names">{{ name }}</li>
+    </ul>
+
+    <p></p>
+
+    <ul>
+        <li v-for="user in users">{{ user.name }} - {{ user.age }}</li>
+    </ul>
+
+    <p></p>
+
+    <ul>
+        <li v-for="(user, index) in users">{{ index}} - {{ user.name }} - {{ user.age }}</li>
+    </ul>
+
+    <template v-for="user in users">
+        <div v-for="(val, key) in user">
+            <p>key: {{ key }}  value: {{ val }}</p>
+        </div>
+    </template>
+</div>
+
+<script src="index.js"></script>
+</body>
+
+</html>
