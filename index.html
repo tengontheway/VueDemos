@@ -1,30 +1,12 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <title>My first Vue app</title>
-    <script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
-    <link href="style.css" rel="stylesheet"/>
-</head>
-
-<body>
-<div id="vue-app1">
-    <h1>name: {{ name }}</h1>
-
-    <p>{{ greet() }}</p>
-
-
-</div>
-
-<div id="vue-app2">
-    <h1>name: {{ name }}</h1>
-
-    <p>{{ greet() }}</p>
-    <p>age: {{ calcAge }}</p>
-    <button v-on:click="changeName">click change name</button>
-</div>
-
-<script src="index.js"></script>
-</body>
-
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>vuedemos</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
 </html>
