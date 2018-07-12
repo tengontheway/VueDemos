@@ -19,7 +19,7 @@ export default {
     },
     methods: {
         changeTitle: function() {
-            this.title = "hello world"
+            this.$emit('changeTitle', "new name")
         }
     }
 }

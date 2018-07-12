@@ -50,6 +50,9 @@
 # lesson 15
 - 传递参数: primitive(原始) 和 reference(引用) types
 
+# lesson 16 events
+- 传递事件 child => parent, this.$emit('eventName', params)
+
 
 
 

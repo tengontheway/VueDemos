@@ -1,6 +1,6 @@
 <template>
     <div>
-        <app-header v-bind:title="title"></app-header>
+        <app-header v-bind:title="title" v-on:changeTitle="updateTitle($event)"></app-header>
         <app-contents v-bind:users="users"></app-contents>
         <hr />
         <app-contents v-bind:users="users"></app-contents>
@@ -30,6 +30,11 @@
                     {name: 'wang', speciality: 'wang is super man!', show: false},
                 ],
                 title: 'Component Test',
+            }
+        },
+        methods: {
+            updateTitle: function(newTitle) {
+                this.title = newTitle
             }
         }
     }
