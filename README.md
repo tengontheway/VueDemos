@@ -47,6 +47,11 @@
 # lesson 13
 - 组件实例
 
+# lesson 14
+- 传递参数: primitive(原始) 和 reference(引用) types
+
+
+
 
 
 

@@ -2,7 +2,9 @@
     <div>
         <app-header v-bind:title="title"></app-header>
         <app-contents v-bind:users="users"></app-contents>
-        <app-footer v-bind:copyright="copyright"></app-footer>
+        <hr />
+        <app-contents v-bind:users="users"></app-contents>
+        <app-footer v-bind:title="title"></app-footer>
     </div>
 </template>
 
@@ -28,7 +30,6 @@
                     {name: 'wang', speciality: 'wang is super man!', show: false},
                 ],
                 title: 'Component Test',
-                copyright: 'Copyright 2017 cisiondata'
             }
         }
     }
