@@ -1,60 +1,39 @@
 <template>
     <div>
-        <app-header v-bind:title="title" v-on:changeTitle="updateTitle($event)"></app-header>
-        <app-contents v-bind:users="users"></app-contents>
-        <hr />
-        <app-contents v-bind:users="users"></app-contents>
-        <app-footer v-bind:title="title"></app-footer>
+        <form-helper>
+            <div slot="form-header">
+                <h3>Thi is the title of the form!</h3>
+                <p>Information about the form</p>
+            </div>
+            <div slot="form-fields">
+                <Input type="text" placeholder="text" required />
+                <Input type="password" placeholder="password" required />
+            </div>
+            <div slot="form-controls">
+                <butotn v-on:click="handleSubmitL">Submit</butotn>
+            </div>
+        </form-helper>
     </div>
 </template>
 
 <script>
-    import Header from './components/Header.vue'
-    import Footer from './components/Footer.vue'
-    import Contents from './components/Contents.vue'
+    import FormHelper from './components/FormHelper.vue'
 
     export default {
         components: {
-            'app-header': Header,
-            'app-footer': Footer,
-            'app-contents': Contents,
+            'form-helper': FormHelper,
         },
         data () {
             return {
-                users: [
-                    {name: 'tzt', speciality: 'tzt is super man!', show: false},
-                    {name: 'cai', speciality: 'cai is super man!', show: false},
-                    {name: 'ye', speciality: 'ye is super man!', show: false},
-                    {name: 'he', speciality: 'he is super man!', show: false},
-                    {name: 'li', speciality: 'li is super man!', show: false},
-                    {name: 'wang', speciality: 'wang is super man!', show: false},
-                ],
-                title: 'Component Test',
+
             }
         },
         methods: {
-            updateTitle: function(newTitle) {
-                this.title = newTitle
+            handleSubmitL: function() {
+
             }
         },
-        beforeCreate() {
-            alert("beforeCreate")
-        },
-        created() {
-            alert("created")
-        },
-        beforeMount() {
-            alert("beforeMount")
-        },
-        mounted() {
-            alert("mounted")
-        },
-        beforeUpdate() {
-            alert("beforeUpdate")
-        },
-        updated() {
-            alert("updated")
-        },
+
     }
 </script>
 

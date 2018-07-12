@@ -59,6 +59,9 @@
 - bus.$emit(eventName, eventParams)
 - bus.$on(eventName, (data) => { ... })
 
+# lesson 18 slots
+- slot槽
+
 
 
 
