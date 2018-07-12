@@ -1,27 +1,28 @@
 <template>
-  <div>
-    <h1>{{ title }}</h1>
-    <app-content></app-content>
-  </div>
+    <div>
+        <app-header></app-header>
+        <app-contents></app-contents>
+        <app-footer></app-footer>
+    </div>
 </template>
 
 <script>
-  import Content from './Content.vue'
+    import Header from './components/Header.vue'
+    import Footer from './components/Footer.vue'
+    import Contents from './components/Contents.vue'
 
-  export default {
-    components: {
-    appContent: Content
-    },
-    data () {
-      return {
-        title: 'Simple Vue',
-      }
+    export default {
+        components: {
+            'app-header': Header,
+            'app-footer': Footer,
+            'app-contents': Contents,
+        },
+        data () {
+            return {}
+        }
     }
-  }
 </script>
 
 <style>
-h1 {
-  color: red;
-}
+
 </style>
