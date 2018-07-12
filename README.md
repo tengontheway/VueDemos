@@ -1,30 +1,55 @@
-# vuedemos
+# lesson1
+- #app、el、data
+- import script
 
-> vue demos
+# lesson2
+- Data & methods
 
-## Build Setup
+# lesson3
+- Data binding
 
-``` bash
-# install dependencies
-npm install
+# lesson4
+- event: 点击、双击、鼠标移动
+- v-on监听DOM事件
 
-# serve with hot reload at localhost:8080
-npm run dev
+# lesson5 事件修饰符
+- 事件修饰符 https://cn.vuejs.org/v2/guide/events.html#%E4%BA%8B%E4%BB%B6%E4%BF%AE%E9%A5%B0%E7%AC%A6
+- v-on的事件的修饰
 
-# build for production with minification
-npm run build
+# lesson6 键盘事件
+- 键盘事件
 
-# build for production and view the bundle analyzer report
-npm run build --report
+# lesson7 双向绑定数据
+- v-modal双向绑定数据
 
-# run unit tests
-npm run unit
+# lesson8 Computed和普通函数的区别
+- Computed函数的调用只依赖于相关的变量，而普通函数在变量更改时会全部调用
+- 对于任何复杂逻辑，你都应当使用计算属性
 
-# run e2e tests
-npm run e2e
+参考链接: https://cn.vuejs.org/v2/guide/computed.html
 
-# run all tests
-npm test
-```
+# lesson9 动态CSS样式
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+# lesson10 条件
+- v-if v-show
+
+
+# lesson 11 Bag Hit Game
+- 更换背景
+- 动态更换长度
+- 按钮显示隐藏
+问题: 图片无法居中
+
+# lesson12
+- 多个实例
+- function 和 computed function
+
+# lesson 13
+- 组件实例
+
+
+
+
+
+
+
