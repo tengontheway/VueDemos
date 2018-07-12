@@ -53,6 +53,14 @@
 # lesson 16 events
 - 传递事件 child => parent, this.$emit('eventName', params)
 
+# lesson 17 events bus
+- 事件列表
+- bus = new Vue()
+- bus.$emit(eventName, eventParams)
+- bus.$on(eventName, (data) => { ... })
+
+
+
 
 
 
