@@ -62,7 +62,9 @@
 # lesson 18 slots
 - slot槽
 
-
+# lesson 19 动态组件
+- <component v-bind:is='dynamic-component-1'></component>
+- keep-alive 保持数据
 
 
 
