@@ -11,16 +11,15 @@
 
 <script>
 export default {
+    props: {
+      users: {
+          type: Array,
+          required: true
+      }
+    },
     data() {
         return {
-            users: [
-                {name: 'tzt', speciality: 'tzt is super man!', show: false},
-                {name: 'cai', speciality: 'cai is super man!', show: false},
-                {name: 'ye', speciality: 'ye is super man!', show: false},
-                {name: 'he', speciality: 'he is super man!', show: false},
-                {name: 'li', speciality: 'li is super man!', show: false},
-                {name: 'wang', speciality: 'wang is super man!', show: false},
-            ]
+
         }
     }
 }

@@ -1,8 +1,8 @@
 <template>
     <div>
-        <app-header></app-header>
-        <app-contents></app-contents>
-        <app-footer></app-footer>
+        <app-header v-bind:title="title"></app-header>
+        <app-contents v-bind:users="users"></app-contents>
+        <app-footer v-bind:copyright="copyright"></app-footer>
     </div>
 </template>
 
@@ -18,7 +18,18 @@
             'app-contents': Contents,
         },
         data () {
-            return {}
+            return {
+                users: [
+                    {name: 'tzt', speciality: 'tzt is super man!', show: false},
+                    {name: 'cai', speciality: 'cai is super man!', show: false},
+                    {name: 'ye', speciality: 'ye is super man!', show: false},
+                    {name: 'he', speciality: 'he is super man!', show: false},
+                    {name: 'li', speciality: 'li is super man!', show: false},
+                    {name: 'wang', speciality: 'wang is super man!', show: false},
+                ],
+                title: 'Component Test',
+                copyright: 'Copyright 2017 cisiondata'
+            }
         }
     }
 </script>

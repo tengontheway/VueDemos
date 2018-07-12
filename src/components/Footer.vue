@@ -6,9 +6,15 @@
 
 <script>
 export default {
+    props: {
+        copyright: {
+            type: String,
+            required: true
+        }
+    },
     data() {
         return {
-            copyright: 'Copyright 2017 cisiondata'
+
         }
     }
 }
