@@ -66,6 +66,12 @@
 - <component v-bind:is='dynamic-component-1'></component>
 - keep-alive 保持数据
 
+# lesson 20 Input数据绑定
+- 实例： Add blog.
+- input 数据绑定 v-model
+
+
+
 
 
 
