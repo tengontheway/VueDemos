@@ -99,6 +99,9 @@ bind(el, binding, vnode) {
 # lesson 24
 - mixins
 
+# lesson 25 routes
+
+
 
 
 

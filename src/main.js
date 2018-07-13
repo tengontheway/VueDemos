@@ -1,14 +1,21 @@
 import Vue from 'vue'
 import App from './App.vue'
 import VueResource from 'vue-resource'
+import VueRouter from 'vue-router'
+import Routes from './Routes'
 
 Vue.use(VueResource)
+Vue.use(VueRouter)
 
 // Vue.directive('rainbow', {
 //     bind(el, binding, vnode) {
 //         el.style.color = '#' + Math.random().toString().slice(2, 8)
 //   }
 // })
+
+const router = new VueRouter({
+    routes: Routes
+})
 
 
 Vue.directive('theme', {
@@ -26,17 +33,18 @@ Vue.directive('theme', {
     }
 })
 
-Vue.filter('to-uppercase',function(value) {
+Vue.filter('to-uppercase', function (value) {
     return value.toUpperCase()
 })
 
-Vue.filter('mini-article', function(value) {
+Vue.filter('mini-article', function (value) {
     return value.slice(0, 40) + "..."
 })
 
 export const bus = new Vue()
 
 new Vue({
-  el: '#app',
-  render: h => h(App)
+        el: '#app',
+        render: h => h(App),
+        router: router
 })

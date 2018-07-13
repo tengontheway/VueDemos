@@ -1,10 +1,6 @@
 <template>
     <div>
-        <component v-bind:is="component"></component>
-        <hr />
-        <list-blog></list-blog>
-
-        <button v-on:click="toggleComponent">toggle</button>
+        <router-view></router-view>
     </div>
 </template>
 
