@@ -1,6 +1,6 @@
 <template>
     <div v-theme:column="'narrow'" id="all-blogs">
-        <h1>All blog articles</h1>
+        <h1>List blog articles</h1>
         <input id="search-input" type="text" placeholder="search blogs" v-model="search" />
         <div v-for="blog in filterBlogs" class="single-blog">
             <h2 v-rainbow>{{ blog.title | to-uppercase }}</h2>

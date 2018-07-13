@@ -96,6 +96,9 @@ bind(el, binding, vnode) {
 - 自定义SearchFilter
 - 全局和局部filter
 
+# lesson 24
+- mixins
+
 
 
 
