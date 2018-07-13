@@ -70,6 +70,11 @@
 - 实例： Add blog.
 - input 数据绑定 v-model
 
+# lesson 21 Checkbox Input数据绑定
+- checkbox数据绑定
+- checkbox 样式设置
+
+
 
 
 
