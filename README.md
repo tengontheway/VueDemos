@@ -66,13 +66,13 @@
 - <component v-bind:is='dynamic-component-1'></component>
 - keep-alive 保持数据
 
-# lesson 20 Input数据绑定
+# lesson 20 Checkbox selectbox数据绑定
+- Input数据绑定
 - 实例： Add blog.
 - input 数据绑定 v-model
-
-# lesson 21 Checkbox Input数据绑定
 - checkbox数据绑定
 - checkbox 样式设置
+- selectbox 数据绑定
 
 
 
