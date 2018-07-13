@@ -74,6 +74,14 @@
 - checkbox 样式设置
 - selectbox 数据绑定
 
+# lesson21 测试demo
+- AddBlog组件
+- ShowBlog组件
+- 动态切换组件
+- 样式理解
+
+
+
 
 
 
