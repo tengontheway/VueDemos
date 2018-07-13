@@ -91,6 +91,13 @@ bind(el, binding, vnode) {
 }
 ```
 
+# lesson 23
+- filter    blog.article | mini-article
+- 自定义SearchFilter
+- 全局和局部filter
+
+
+
 
 
 

@@ -1,9 +1,10 @@
 <template>
     <div v-theme:column="'narrow'" id="all-blogs">
         <h1>All blog articles</h1>
-        <div v-for="blog in blogs" class="single-blog">
-            <h2 v-rainbow>{{ blog.title }}</h2>
-            <article>{{ blog.desc }}</article>
+        <input id="search-input" type="text" placeholder="search blogs" v-model="search" />
+        <div v-for="blog in filterBlogs" class="single-blog">
+            <h2 v-rainbow>{{ blog.title | to-uppercase }}</h2>
+            <article>{{ blog.desc | mini-article }}</article>
         </div>
     </div>
 </template>
@@ -12,6 +13,7 @@
 export default {
     data() {
         return {
+            search: '',
             blogs: [
                 {
                     title: 'CSS display属性',
@@ -35,7 +37,27 @@ export default {
                 },
             ]
         }
+    },
+    computed: {
+        filterBlogs: function() {
+            return this.blogs.filter((blog) => {
+                return blog.title.match(this.search)
+            })
+        }
+    },
+    filters: {
+        toUppercase(value) {
+            return value.toUpperCase()
+        }
+    },
+    directives: {
+        'rainbow': {
+            bind(el, binding, vnode) {
+                el.style.color = '#' + Math.random().toString().slice(2, 8)
+            }
+        }
     }
+
 }
 </script>
 
@@ -50,6 +72,10 @@ export default {
     margin: 20px 0;
     box-sizing: border-box;
     background: #eee;
+}
+
+#search-input {
+    width: 100%;
 }
 
 </style>

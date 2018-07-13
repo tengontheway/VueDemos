@@ -4,11 +4,11 @@ import VueResource from 'vue-resource'
 
 Vue.use(VueResource)
 
-Vue.directive('rainbow', {
-    bind(el, binding, vnode) {
-        el.style.color = '#' + Math.random().toString().slice(2, 8)
-  }
-})
+// Vue.directive('rainbow', {
+//     bind(el, binding, vnode) {
+//         el.style.color = '#' + Math.random().toString().slice(2, 8)
+//   }
+// })
 
 
 Vue.directive('theme', {
@@ -24,6 +24,14 @@ Vue.directive('theme', {
         }
 
     }
+})
+
+Vue.filter('to-uppercase',function(value) {
+    return value.toUpperCase()
+})
+
+Vue.filter('mini-article', function(value) {
+    return value.slice(0, 40) + "..."
 })
 
 export const bus = new Vue()
