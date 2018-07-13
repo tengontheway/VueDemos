@@ -80,6 +80,17 @@
 - 动态切换组件
 - 样式理解
 
+# lesson 22 custom directive
+- Vue.directive
+- v-theme:column
+```
+bind(el, binding, vnode) {
+    binding.value ...
+    binding.arg ...
+    el.style.color  ...
+}
+```
+
 
 
 
