@@ -100,6 +100,11 @@ bind(el, binding, vnode) {
 - mixins
 
 # lesson 25 routes
+- route: hash mode & history mode
+- route links. <router-link>、exact、router-link-active
+- route params
+
+
 
 
 
