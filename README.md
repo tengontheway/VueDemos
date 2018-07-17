@@ -104,6 +104,12 @@ bind(el, binding, vnode) {
 - route links. <router-link>、exact、router-link-active
 - route params
 
+# lesson 26 firebase
+- firebase(Realtime Database) https://console.firebase.google.com/
+- axios(Promise based HTTP client for the browser and node.js) https://github.com/axios/axios
+
+
+
 
 
 

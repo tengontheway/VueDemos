@@ -4,20 +4,20 @@
 
         <form>
             <label>Blog title:</label>
-            <input type='text' v-model.lazy="blog.title" required />
+            <input type='text' v-model.lazy="blog.title" required/>
             <label>Blog content:</label>
             <textarea v-model.lazy="blog.content" required></textarea>
         </form>
 
         <div id="checkboxes">
             <label>Name</label>
-            <input type="checkbox" value="name" v-model="blog.categories" />
+            <input type="checkbox" value="name" v-model="blog.categories"/>
             <label>Sex</label>
-            <input type="checkbox" value="sex" v-model="blog.categories" />
+            <input type="checkbox" value="sex" v-model="blog.categories"/>
             <label>Age</label>
-            <input type="checkbox" value="age" v-model="blog.categories" />
+            <input type="checkbox" value="age" v-model="blog.categories"/>
             <label>Address</label>
-            <input type="checkbox" value="address" v-model="blog.categories" />
+            <input type="checkbox" value="address" v-model="blog.categories"/>
         </div>
 
         <!-- select box -->
@@ -26,6 +26,7 @@
             <option v-for="author in authors">{{ author }}</option>
         </select>
 
+        <button v-on:click="submit">submit</button>
 
         <div id="preview">
             <h3>Preview blog:</h3>
@@ -43,54 +44,68 @@
 </template>
 
 <script>
-export default {
-    data() {
-        return {
-            blog: {
-                title: '',
-                content: '',
-                categories: [],
-                author: 'cjp'
-            },
-            authors:['tzt', 'cjp', 'ysy', 'hc']
-        }
+    const axios = require('axios');
+
+
+    export default {
+        data() {
+            return {
+                blog: {
+                    title: '',
+                    content: '',
+                    categories: [],
+                    author: 'cjp'
+                },
+                authors: ['tzt', 'cjp', 'ysy', 'hc']
+            }
+        },
+
+
+        methods: {
+            submit: function () {
+                axios.post('https://testvue-c9d7d.firebaseio.com/posts.json', this.blog)
+                    .then((data) => {
+                        console.log("-------data:" + JSON.stringify(data))
+                    })
+            }
+        },
+
     }
-}
 </script>
 
 <style scoped>
-#add-blog *{
-    box-sizing: border-box;
-}
+    #add-blog * {
+        box-sizing: border-box;
+    }
 
-#add-blog {
-    margin: 20px auto;
-    max-width: 500px;
-}
+    #add-blog {
+        margin: 20px auto;
+        max-width: 500px;
+    }
 
-label {
-    display: block;
-    margin: 20px 0 10px;
-}
+    label {
+        display: block;
+        margin: 20px 0 10px;
+    }
 
-input[type='text'], textarea {
-    display: block;
-    width: 100%;
-    padding: 8px;
-}
+    input[type='text'], textarea {
+        display: block;
+        width: 100%;
+        padding: 8px;
+    }
 
-#preview {
-    padding: 10px 20px;
-    border: 1px dotted #ccc;
-    margin: 30px 0;
-}
+    #preview {
+        padding: 10px 20px;
+        border: 1px dotted #ccc;
+        margin: 30px 0;
+    }
 
-#checkboxes input {
-    display: inline-block;
-}
+    #checkboxes input {
+        display: inline-block;
+    }
 
-#checkboxes label {
-    display: inline-block;
-}
+    #checkboxes label {
+        display: inline-block;
+    }
 
 </style>
